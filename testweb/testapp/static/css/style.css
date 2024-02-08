@@ -1,0 +1,18 @@
+.index_back {
+  background-image: url('/static/images/back.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.register_back {
+  background-image: url('/static/images/back1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.form_class {
+    width: 30%;  /* adjust to desired width */
+    margin: 0 auto; /* center the container */
+}

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  {% load static %}
+  {% block extrascripts %}
+  <script type="text/JavaScript" src="{% static 'js/scripts.js' %}"></script>
+  <script> foo( " {{ name }} " ) </script>
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Регистрация сотрудника</title>
+</head>
+<body>
+    <h2>Форма регистрации</h2>
+    <form method="post" action="registeruser/">
+        {% csrf_token %}
+        <p>Имя:<br> <input name="name" /></p>
+        <p>
+            Ваша должность:<br />
+            <select multiple name="psychotypes">
+                <option>Техник</option>
+                <option>Инжинер</option>
+                <option>Нач. Лаборатории</option>
+                <option>Босс</option>
+             </select>
+        </p>
+        <input type="submit" value="Send" />
+    </form>
+</body>
+</html>
+

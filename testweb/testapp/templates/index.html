@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head text="#ffffff">
+    <meta charset="utf-8" />
+    <title>ПЕРЕПИСЬ СОТРУДНИКОВ</title>
+{% load static %}
+<link style="color:#FF0000;" rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
+</head>
+ <body class="index_back" text="#ffffff">
+    <h2>Список сотрудников</h2>
+    <a href="register/">Регистрация сотрудника</a>
+    <table border="3" height="50%" width="50%" bordercolor="blue" align=center cellpadding ="10">
+        <thead><th>Имя</th><th>Должность</th></thead>
+        {% for user in users %}
+        <tr>
+            <td><b>{{ user.name }}</b></td>
+            <td>
+                {% for ptype in user.ptypes.all %}
+                    {{ptype.name}} 
+                {% endfor %}
+            </td>
+            <td>
+                <a style="color:#FF0000;" href="edit/{{user.name}}">Изменить</a> | <a style="color:#FF0000;" href="delete/{{user.name}}">Удалить</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+  {% load static %}
+  {% block extrascripts %}
+  <script type="text/JavaScript" src="{% static 'js/scripts.js' %}"></script>
+  {% if welcome %}
+  <script> print( " {{ welcome }} " ) </script>
+  {% endif %}
+  {% if user_exist %}
+  <script> print( "ты уже существуешь!" ) </script>
+  {% endif %}
+  {% if user_not_exist %}
+  <script> print( "тебя нет!" ) </script>
+  {% endif %}
+  {% endblock %}
+</body>
+</html>
+

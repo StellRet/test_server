@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>РЕГИСТРАЦИЯ НОВОГО СОТРУДНИКА</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
+</head>
+<body class="register_back">
+    <a href="/">Главная</a>
+    <form method="POST" class="form_class">
+        {% csrf_token %}
+    <table>
+        {% if name %}
+	<input type="hidden" name="name" value={{ name }} id="id_name">
+	{% endif %}
+        {{ form }}
+    </table>
+    <input type="submit" value="Send">
+</form>
+</body>
+</html>
+
