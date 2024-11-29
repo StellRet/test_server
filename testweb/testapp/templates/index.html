@@ -4,6 +4,33 @@
     <meta charset="utf-8" />
     <title>ПЕРЕПИСЬ СОТРУДНИКОВ</title>
 {% load static %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<style>
+    .navbar-custom {
+        background-image: url('static/images/images.png');
+        background-position:center;
+        width: 100%;
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: green;
+    }
+    .navbar-custom .copy-text {
+        color: pink;
+    }
+</style>
+<div class="container">
+  <ul class="nav navbar-custom">
+    <li class="nav-item">
+      <a class="nav-link navbar-text" href="/">PERIPIS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link navbar-text" href="/register">REGISTRACIA PIDORASA</a>
+    </li>
+  </ul>
+</div>
 <link style="color:#FF0000;" rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
 </head>
  <body class="index_back" text="#ffffff">
@@ -39,6 +66,13 @@
   <script> print( "тебя нет!" ) </script>
   {% endif %}
   {% endblock %}
+<div class="card text-white bg-dark mb-3" style="max-width: 18rem; bottom: 0; right: 0; position: absolute; opacity: 0.5;">
+  <div class="card-header copy-text">@Copyright Toxa Stavitsky</div>
+  <div class="card-body">
+    <h5 class="card-title">Poshel naxui.</h5>
+    <p class="card-text">Idi naxui.</p>
+  </div>
+</div>
 </body>
 </html>
 
